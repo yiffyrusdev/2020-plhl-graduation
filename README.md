@@ -4,7 +4,7 @@
 Проект представляет собой мини-библиотеку Python3, предназначенную для решения задач прогнозирования, предсказания и выявления зависимостей методом линейной регрессии.
 Система способна работать с достаточно большим количеством примеров (1000-100000), имеющих достаточно большое (100-1000) число признаков.
 
-![preview](presentation/interface.png)
+![preview](images/interface.png)
 
 Также реализована функциональная программа с графическим интерфейсом.
 
@@ -20,8 +20,8 @@
 ### Внешности
 Функциональная программа с графическим интерфейсом PyQt5 предоставляет возможности конфигурирования регрессии, выбора метода оптимизации и изменения его параметров, выбора данных для анализа, обучения модели и просмотра результата.
 
-![chose regression model options](presentation/TrainTab.png)
-![train regression model](presentation/TrainTabAfterFit.png)
+![chose regression model options](images/TrainTab.png)
+![train regression model](images/TrainTabAfterFit.png)
 
 На картинках выше видно, как регерссионная модель приблизила красную плоскость к синим точкам примеров. В данном случае мы имеем дело с данными, в которых необходимо выявить зависимость одного значения (предикторного) от двух других (признаковых). Видно, что модель хорошо справилась с задачей.
 
@@ -32,22 +32,22 @@
 
 Процесс взаимодействия пользователя с программой, реализующей возможности разработанной библиотеки, отображён на следующей диаграмме:
 
-![user action with regression interface](presentation/ActionDuagram.png)
+![user action with regression interface](images/ActionDuagram.png)
 
 Внутренная логика (регрессия, оптимизация и яже с ними) представлена двумя модулями: _Frontend_ и _Backend_, внутри которых реализованы соответствующие классы:
 
-![backend classes uml diagram](presentation/Backend.png)
+![backend classes uml diagram](images/Backend.png)
 
-![frontend classed uml diagram](presentation/Frontend.png)
+![frontend classed uml diagram](images/Frontend.png)
 
-![class interaction uml diagram](presentation/BackendAction.png)
+![class interaction uml diagram](images/BackendAction.png)
 
 #### Математика
 В общем и целом алгоритм работы регрессионной модели достаточно прост и изящен: в начале процесса обучения модель только получает входной датасет с $M$ примерами, у каждого из которых $N$ признаков и одно предсказываемое значение. Далее создается случайный вектор $\vec{W}$ размера $N$. Затем в цикле некоторое количество раз выполняется следующая операция:
 
-![\vec{W} = \vec{W}-\vec{Fix} * lr](presentation/formula1.png)
+![\vec{W} = \vec{W}-\vec{Fix} * lr](images/formula1.png)
 
-Где ![\vec{Fix}](presentation/formula2.png) -- поправочный вектор, а **lr** -- скорость обучения модели.
+Где ![\vec{Fix}](images/formula2.png) -- поправочный вектор, а **lr** -- скорость обучения модели.
 
 Поправочный вектор в данном случае вычисляется с помощью градиента одним из следующих методов:
   * Классический
@@ -59,9 +59,9 @@
 
 Ниже приведён процесс вычисления классического градиента:
 
-![\vec{Fix} = \nabla(Loss(\vec{W},X,\vec{y}))](presentation/formula3.png)
+![\vec{Fix} = \nabla(Loss(\vec{W},X,\vec{y}))](images/formula3.png)
 
-Где ![Loss(\vec{W},X,\vec{y})](presentation/formula4.png) -- функция ошибки в данной точке графика ошибки, **X** -- матрица признаков для некоторого пула примеров, ![\vec{y}](presentaion/formula5.png) -- вектор ответов для соответствующих примеров матрицы примеров.
+Где ![Loss(\vec{W},X,\vec{y})](images/formula4.png) -- функция ошибки в данной точке графика ошибки, **X** -- матрица признаков для некоторого пула примеров, ![\vec{y}](images/formula5.png) -- вектор ответов для соответствующих примеров матрицы примеров.
 
 #### Код
 С исходным кодом можно ознакомиться в [репозитории](https://github.com/pushsla/2020-plhl-graduation) проекта на GitHub.
