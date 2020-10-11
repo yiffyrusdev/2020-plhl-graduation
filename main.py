@@ -50,7 +50,7 @@ def Linear3DWithNoise(arange: int = 50) -> Tuple[np.matrix, np.matrix]:
 
     X = np.hstack((X0, X1))
 
-    return (X, Y)
+    return X, Y
 
 
 def Fish3D() -> Tuple[np.matrix, np.matrix]:

@@ -8,6 +8,7 @@
 
 from PyQt5 import QtCore, QtWidgets
 
+
 class Ui_ExceptionPopup(object):
     def setupUi(self, ExceptionPopup):
         ExceptionPopup.setObjectName("ExceptionPopup")
@@ -25,6 +26,6 @@ class Ui_ExceptionPopup(object):
 
     def retranslateUi(self, ExceptionPopup):
         _translate = QtCore.QCoreApplication.translate
-        ExceptionPopup.setWindowTitle(_translate("ExceptionPopup", "Unhandled Exception"))
+        ExceptionPopup.setWindowTitle(_translate(
+            "ExceptionPopup", "Unhandled Exception"))
         self.buttonOk.setText(_translate("ExceptionPopup", "OK"))
-
