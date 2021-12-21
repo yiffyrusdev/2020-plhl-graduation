@@ -1,5 +1,14 @@
 # SuperMega ML =)
 
+## Have fun!
+If you find this code useful, I will be glad if you use it in your GPL3-compatible licensed project.
+
+**"Why GPL-3. Author, are you too proud?"**
+> Nope. It's just that I'm fighting for free software, and any possibility that someone else is using my code on a project that people, myself included, will have to pay for is unacceptable.
+> My code is neither perfect nor revolutionary. But the world is crazy, you know
+
+Any help and criticism is greatly appreciated.
+
 ## Описание
 Проект представляет собой мини-библиотеку Python3, предназначенную для решения задач прогнозирования, предсказания и выявления зависимостей методом линейной регрессии.
 Система способна работать с достаточно большим количеством примеров (1000-100000), имеющих достаточно большое (100-1000) число признаков.
